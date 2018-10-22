@@ -3,7 +3,7 @@ package dadata
 import "context"
 
 func (daData *DaData) sendCleanRequest(ctx context.Context, lastURLPart string, source, result interface{}) error {
-	return daData.sendRequest(ctx, "clean/"+lastURLPart, source, result)
+	return daData.sendCleaningRequest(ctx, "clean/"+lastURLPart, source, result)
 }
 
 // CleanAddresses clean all provided addresses

@@ -5,8 +5,6 @@ import (
 	"fmt"
 )
 
-const baseSuggestURL = "https://suggestions.dadata.ru/suggestions/api/4_1/rs/"
-
 // GeoIPResponse response for GeoIP
 type GeoIPResponse struct {
 	Location *ResponseAddress `json:"location"`

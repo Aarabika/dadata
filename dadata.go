@@ -11,7 +11,8 @@ import (
 	"net/http"
 )
 
-const baseURL = "https://dadata.ru/api/v2/"
+const baseCleaningURL = "https://dadata.ru/api/v2/"
+const baseSuggestURL = "https://suggestions.dadata.ru/suggestions/api/4_1/rs/"
 
 // DaData client for DaData.ru (https://dadata.ru/)
 type DaData struct {
@@ -81,7 +82,12 @@ func (daData *DaData) sendRequestToURL(ctx context.Context, method, url string, 
 	return nil
 }
 
-// sendRequest
-func (daData *DaData) sendRequest(ctx context.Context, lastURLPart string, source interface{}, result interface{}) error {
-	return daData.sendRequestToURL(ctx, "POST", baseURL+lastURLPart, source, result)
+// sendCleaningRequest
+func (daData *DaData) sendCleaningRequest(ctx context.Context, lastURLPart string, source interface{}, result interface{}) error {
+	return daData.sendRequestToURL(ctx, "POST", baseCleaningURL+lastURLPart, source, result)
+}
+
+// sendSuggestRequest
+func (daData *DaData) sendSuggestingRequest(ctx context.Context, lastURLPart string, source interface{}, result interface{}) error {
+	return daData.sendRequestToURL(ctx, "POST", baseSuggestURL+lastURLPart, source, result)
 }

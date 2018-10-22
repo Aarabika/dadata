@@ -1,11 +1,9 @@
-package dadata_test
+package dadata
 
 import (
 	"os"
 	"sync"
 	"testing"
-
-	. "github.com/webdeskltd/dadata"
 )
 
 var (

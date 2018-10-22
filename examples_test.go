@@ -1,4 +1,4 @@
-package dadata_test
+package dadata
 
 import (
 	"context"

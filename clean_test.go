@@ -1,10 +1,8 @@
-package dadata_test
+package dadata
 
 import (
-	"testing"
-
 	"github.com/go-test/deep"
-	. "github.com/webdeskltd/dadata"
+	"testing"
 )
 
 func TestCleanAddresses(t *testing.T) {

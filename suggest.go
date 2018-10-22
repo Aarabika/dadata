@@ -69,8 +69,8 @@ type SuggestEmailResponse struct {
 	Suggestions []ResponseEmail `json:"suggestions"`
 }
 
-func (daData *DaData) sendSuggestRequest(ctx context.Context, lastURLPart string, requestParams SuggestRequestParams, result interface{}) error {
-	return daData.sendRequest(ctx, "suggest/"+lastURLPart, requestParams, result)
+func (daData *DaData) sendSuggestRequest(ctx context.Context, lastURLPart string, source, result interface{}) error {
+	return daData.sendSuggestingRequest(ctx, "suggest/"+lastURLPart, source, result)
 }
 
 // SuggestAddresses try to return suggest addresses by requestParams
