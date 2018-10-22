@@ -5,8 +5,6 @@ import (
 	"fmt"
 	"os"
 	"time"
-
-	. "github.com/webdeskltd/dadata"
 )
 
 func ExampleDaData_CleanAddresses() {

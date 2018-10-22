@@ -3,8 +3,6 @@ package dadata
 import (
 	"reflect"
 	"testing"
-
-	. "github.com/webdeskltd/dadata"
 )
 
 func TestDaData_SuggestAddresses(t *testing.T) {
